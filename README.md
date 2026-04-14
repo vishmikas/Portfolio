@@ -107,4 +107,3 @@ A system to manage and process student academic records.
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO
