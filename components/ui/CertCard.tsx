@@ -1,13 +1,15 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ExternalLink, Award, Code2, Palette } from 'lucide-react'
+import { ExternalLink, Award, Code2, Palette, FileText } from 'lucide-react'
 import { Certificate } from '@/lib/data'
 
+// We added the 'other' category here to satisfy TypeScript
 const categoryConfig = {
   technical: { icon: Code2, color: '#3b82f6', bg: '#eff6ff', label: 'Technical' },
   management: { icon: Award, color: '#d97706', bg: '#fffbeb', label: 'Management' },
   design: { icon: Palette, color: '#8b5cf6', bg: '#f5f3ff', label: 'Design' },
+  other: { icon: FileText, color: '#64748b', bg: '#f1f5f9', label: 'Other' },
 }
 
 interface CertCardProps {
@@ -16,6 +18,7 @@ interface CertCardProps {
 }
 
 export default function CertCard({ cert, index = 0 }: CertCardProps) {
+  // Now TypeScript knows that cert.category will always find a match in categoryConfig
   const config = categoryConfig[cert.category]
   const Icon = config.icon
 
