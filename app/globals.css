@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-syne: 'Syne', sans-serif;
+  --font-jetbrains: 'JetBrains Mono', monospace;
+  --font-dm: 'DM Sans', sans-serif;
+
+  /* Refined palette */
+  --bg: #fafaf9;
+  --bg-card: #ffffff;
+  --border: #e7e5e4;
+  --border-strong: #d6d3d1;
+  --text-primary: #1c1917;
+  --text-secondary: #57534e;
+  --text-muted: #a8a29e;
+  --accent: #0f172a;
+  --accent-hover: #1e293b;
+  --tag-bg: #f5f5f4;
+  --tag-text: #44403c;
+  --success: #16a34a;
+  --warning: #d97706;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-dm);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-syne);
+}
+
+::selection {
+  background: #0f172a;
+  color: #fafaf9;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 2px;
+}
+
+/* Noise texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-syne);
+  }
+  .font-body {
+    font-family: var(--font-dm);
+  }
+  .font-code {
+    font-family: var(--font-jetbrains);
+  }
+}
+
+@layer utilities {
+  .container-shell {
+    @apply mx-auto w-full max-w-6xl px-6;
+  }
+}
