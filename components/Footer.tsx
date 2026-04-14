@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container-shell flex flex-col gap-5 py-10 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p className="font-display text-base font-semibold text-stone-950">{personalInfo.name}</p>
-          <p className="mt-1 text-sm text-stone-500">Full-Stack Developer · AI-focused builder · Barista course completed · Photography practice</p>
+          <p className="mt-1 text-sm text-stone-500">Full-Stack Developer</p>
         </div>
 
         <div className="flex items-center gap-4">
