@@ -22,7 +22,6 @@ export default function Hero() {
             transition={{ duration: 0.55 }}
             className="mb-6 inline-flex items-center gap-2 rounded-full border border-stone-200 bg-white px-4 py-2 text-xs uppercase tracking-[0.24em] text-stone-500 shadow-sm"
           >
-            <Sparkles size={14} />
             Available for internships and impactful product work
           </motion.div>
 
