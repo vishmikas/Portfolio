@@ -18,6 +18,7 @@ export default function CertificatesPage() {
     { label: 'Technical', items: technical },
     { label: 'Management', items: management },
     { label: 'Design', items: design },
+    { label: 'Other', items: certificates.filter(c => c.category === 'other') },
   ].filter(g => g.items.length > 0)
 
   return (
@@ -26,7 +27,7 @@ export default function CertificatesPage() {
       <main className="pt-20">
         <Section
           title="Certificates Vault"
-          subtitle={`${certificates.length} certifications across technical, management, and design disciplines.`}
+          subtitle={`${certificates.length} certifications across technical, management, design, and other disciplines.`}
         >
           <div className="space-y-12">
             {groups.map(group => (

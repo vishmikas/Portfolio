@@ -30,13 +30,16 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="mt-8">
+          <div className="mt-8 flex items-center justify-between border-t border-stone-200 pt-8">
+            <p className="text-sm text-stone-500">
+              {projects.length} total projects — solo builds, group systems, and AI-backed tools.
+            </p>
             <Link
               href="/projects"
-              className="group inline-flex items-center gap-2 text-sm font-medium text-stone-900 transition-opacity hover:opacity-70"
+              className="group inline-flex items-center gap-2 rounded-2xl bg-stone-950 px-5 py-2.5 text-sm font-medium text-white transition hover:-translate-y-0.5"
             >
-              Explore all project case studies
-              <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
+              All projects
+              <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
             </Link>
           </div>
         </Section>

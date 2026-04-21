@@ -60,6 +60,7 @@ export type Certificate = {
   issuer: string
   date: string
   credentialUrl?: string
+  imageUrl?: string
   category: 'technical' | 'management' | 'design' | 'other'
 }
 
@@ -150,7 +151,7 @@ export const projects: Project[] = [
       'Bambinoo is a healthcare-focused digital CHDR platform built as a second-year group project. The system centralizes growth records, developmental milestones, vaccinations, and clinician notes, while also supporting AI-driven health analytics and predictive growth monitoring.',
     status: 'completed',
     featured: true,
-    year: '2025',
+    year: '2026',
     team: 'group',
     role: 'ML engineering, analytics frontend, admin health monitoring, and health risk notifications',
     techStack: ['React', 'Vite', 'Flask', 'Python', 'SQLAlchemy', 'SQLite', 'Socket.IO', 'Plotly.js', 'Recharts', 'Gemini AI'],
@@ -230,7 +231,7 @@ export const projects: Project[] = [
       'This project manages departmental petty cash allocation, expense submission, and reporting in a controlled multi-user environment. It focuses on role separation, secure authentication, and reliable API behavior.',
     status: 'completed',
     featured: true,
-    year: '2025',
+    year: '2026',
     team: 'solo',
     role: 'Full-stack developer',
     techStack: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'JWT', 'bcryptjs'],
@@ -290,7 +291,7 @@ export const projects: Project[] = [
       'The POS Ticketing System is designed for environments where tickets need to be issued quickly and accurately. It emphasizes transaction flow, usability, and operational visibility during sales.',
     status: 'completed',
     featured: true,
-    year: '2025',
+    year: '2026',
     team: 'solo',
     role: 'Full-stack developer',
     techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.IO'],
@@ -461,23 +462,60 @@ export const projects: Project[] = [
 export const certificates: Certificate[] = [
   {
     id: 'cert-1',
-    title: 'Google Project Management Foundations',
+    title: 'Foundations of Project Management',
     issuer: 'Google / Coursera',
-    date: '2023',
+    date: 'Mar 2026',
+    credentialUrl: 'https://coursera.org/verify/UU4TDXZAAKIP',
+    imageUrl: '/certificates/foundations-of-project-management.pdf',
+    category: 'management',
+  },
+  {
+    id: 'cert-6',
+    title: 'Project Initiation: Starting a Successful Project',
+    issuer: 'Google / Coursera',
+    date: 'Apr 2026',
+    credentialUrl: 'https://coursera.org/verify/EJOKDQS79W9R',
+    imageUrl: '/certificates/project-initiation.pdf',
     category: 'management',
   },
   {
     id: 'cert-2',
-    title: 'Python Programming',
+    title: 'Python for Beginners',
     issuer: 'University of Moratuwa',
-    date: '2023',
+    date: 'Feb 2026',
+    imageUrl: '/certificates/python-for-beginners.pdf',
+    category: 'technical',
+  },
+  {
+    id: 'cert-7',
+    title: 'Python Essential Training',
+    issuer: 'LinkedIn Learning',
+    date: 'Apr 2025',
+    imageUrl: '/certificates/python-essential-training.pdf',
+    category: 'technical',
+  },
+  {
+    id: 'cert-8',
+    title: 'Python for Non-Programmers',
+    issuer: 'LinkedIn Learning',
+    date: 'May 2025',
+    imageUrl: '/certificates/python-for-non-programmers.pdf',
+    category: 'technical',
+  },
+  {
+    id: 'cert-9',
+    title: 'Python Data Structures: Trees',
+    issuer: 'LinkedIn Learning',
+    date: 'Apr 2025',
+    imageUrl: '/certificates/python-data-structures-trees.pdf',
     category: 'technical',
   },
   {
     id: 'cert-3',
-    title: 'Web Design',
+    title: 'Web Design for Beginners',
     issuer: 'University of Moratuwa',
-    date: '2023',
+    date: '2025',
+    imageUrl: '/certificates/web-design-for-beginners.pdf',
     category: 'design',
   },
   {
@@ -485,6 +523,14 @@ export const certificates: Certificate[] = [
     title: 'Barista Course',
     issuer: 'Professional Training',
     date: '2024',
+    category: 'other',
+  },
+  {
+    id: 'cert-5',
+    title: 'IEEEXtreme 19.0 Programming Competition',
+    issuer: 'IEEE',
+    date: 'Oct 2025',
+    imageUrl: '/certificates/ieee-extreme-19.pdf',
     category: 'other',
   },
 ]
