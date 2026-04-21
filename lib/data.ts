@@ -68,7 +68,7 @@ export const skillCategories: SkillCategory[] = [
   {
     label: 'Languages',
     icon: 'Code2',
-    skills: ['Python', 'Java', 'JavaScript', 'TypeScript', 'SQL'],
+    skills: ['Python', 'Java', 'JavaScript', 'TypeScript', 'SQL', 'HTML', 'CSS'],
   },
   {
     label: 'Frontend',
@@ -78,22 +78,32 @@ export const skillCategories: SkillCategory[] = [
   {
     label: 'Backend',
     icon: 'Server',
-    skills: ['Node.js', 'Express', 'Flask', 'REST APIs', 'JWT Authentication', 'Socket.IO'],
+    skills: ['Node.js', 'Express', 'Flask', 'Spring Boot', 'REST APIs', 'JWT Authentication', 'Socket.IO', 'WebSockets'],
   },
   {
     label: 'Databases',
     icon: 'Database',
-    skills: ['MongoDB', 'MySQL', 'SQLite', 'SQLAlchemy', 'Mongoose', 'JDBC'],
+    skills: ['MongoDB', 'MySQL', 'SQLite', 'SQLAlchemy', 'Mongoose', 'JDBC', 'IndexedDB'],
   },
   {
     label: 'AI / ML',
     icon: 'Brain',
-    skills: ['Data Preprocessing', 'Model Training', 'Growth Prediction', 'Gemini AI Integration', 'Analytics'],
+    skills: ['TensorFlow / Keras', 'LSTM Models', 'Data Preprocessing', 'Growth Prediction', 'Gemini AI Integration', 'Pandas'],
+  },
+  {
+    label: 'Security',
+    icon: 'Shield',
+    skills: ['bcrypt', 'Helmet', 'Rate Limiting', 'Input Validation', 'JWT', 'Mongo Sanitize'],
   },
   {
     label: 'Tools',
     icon: 'Wrench',
-    skills: ['Git', 'GitHub', 'Postman', 'Figma', 'VS Code', 'IntelliJ IDEA'],
+    skills: ['Git', 'GitHub', 'Postman', 'VS Code', 'IntelliJ IDEA', 'Maven'],
+  },
+  {
+    label: 'Creative & Design',
+    icon: 'Cpu',
+    skills: ['Adobe Lightroom', 'Adobe Photoshop', 'Adobe Illustrator', 'Figma', 'Photography'],
   },
 ]
 
@@ -122,11 +132,21 @@ export const timelineMilestones: TimelineMilestone[] = [
     id: 'tm-3',
     date: '2024',
     title: 'Barista Course Completed',
-    organization: 'BOUNO Coffee Academy',
+    organization: 'BUONO Coffee Academy',
     type: 'certification',
     description:
-      'Completed a professional barista course, developing precision, consistency, and a strong focus on customer experience.',
-    tags: ['Barista', 'Professional Growth'],
+      'Completed a 40-hour professional Barista Skills Masterclass. Final Grade: A (Distinction) — 92/100. Covered coffee brewing, extraction, milk techniques, café management, and customer service.',
+    tags: ['Barista', 'Grade A', 'Distinction'],
+  },
+  {
+    id: 'tm-2b',
+    date: '2022',
+    title: 'Photography Club Committee Member',
+    organization: 'Sabaragamuwa University',
+    type: 'achievement',
+    description:
+      'Served as a Committee Member of the University Photography Club, contributing to event photography and documentation while developing strong editing and design skills using Adobe Lightroom, Photoshop, and Illustrator.',
+    tags: ['Photography', 'Adobe', 'Design'],
   },
   {
     id: 'tm-4',
@@ -378,7 +398,7 @@ export const projects: Project[] = [
     year: '2024',
     team: 'solo',
     role: 'Java developer',
-    techStack: ['Java', 'Java Swing', 'AWT'],
+    techStack: ['React', 'Vite', 'Java', 'Spring Boot', 'REST API', 'Maven'],
     highlights: [
       'Keyboard-controlled gameplay using Java desktop UI',
       'Game loop logic for movement and updates',
@@ -466,7 +486,7 @@ export const certificates: Certificate[] = [
     issuer: 'Google / Coursera',
     date: 'Mar 2026',
     credentialUrl: 'https://coursera.org/verify/UU4TDXZAAKIP',
-    imageUrl: '/certificates/foundations-of-project-management.pdf',
+    imageUrl: '/certificates/foundations-of-project-management.png',
     category: 'management',
   },
   {
@@ -475,7 +495,7 @@ export const certificates: Certificate[] = [
     issuer: 'Google / Coursera',
     date: 'Apr 2026',
     credentialUrl: 'https://coursera.org/verify/EJOKDQS79W9R',
-    imageUrl: '/certificates/project-initiation.pdf',
+    imageUrl: '/certificates/project-initiation.png',
     category: 'management',
   },
   {
@@ -483,7 +503,7 @@ export const certificates: Certificate[] = [
     title: 'Python for Beginners',
     issuer: 'University of Moratuwa',
     date: 'Feb 2026',
-    imageUrl: '/certificates/python-for-beginners.pdf',
+    imageUrl: '/certificates/python-for-beginners.png',
     category: 'technical',
   },
   {
@@ -491,7 +511,7 @@ export const certificates: Certificate[] = [
     title: 'Python Essential Training',
     issuer: 'LinkedIn Learning',
     date: 'Apr 2025',
-    imageUrl: '/certificates/python-essential-training.pdf',
+    imageUrl: '/certificates/python-essential-training.png',
     category: 'technical',
   },
   {
@@ -499,7 +519,7 @@ export const certificates: Certificate[] = [
     title: 'Python for Non-Programmers',
     issuer: 'LinkedIn Learning',
     date: 'May 2025',
-    imageUrl: '/certificates/python-for-non-programmers.pdf',
+    imageUrl: '/certificates/python-for-non-programmers.png',
     category: 'technical',
   },
   {
@@ -507,7 +527,7 @@ export const certificates: Certificate[] = [
     title: 'Python Data Structures: Trees',
     issuer: 'LinkedIn Learning',
     date: 'Apr 2025',
-    imageUrl: '/certificates/python-data-structures-trees.pdf',
+    imageUrl: '/certificates/python-data-structures-trees.png',
     category: 'technical',
   },
   {
@@ -515,14 +535,15 @@ export const certificates: Certificate[] = [
     title: 'Web Design for Beginners',
     issuer: 'University of Moratuwa',
     date: '2025',
-    imageUrl: '/certificates/web-design-for-beginners.pdf',
+    imageUrl: '/certificates/web-design-for-beginners.png',
     category: 'design',
   },
   {
     id: 'cert-4',
-    title: 'Barista Course',
-    issuer: 'Professional Training',
-    date: '2024',
+    title: 'Barista Skills Masterclass',
+    issuer: 'BUONO Coffee Academy',
+    date: 'May 2024',
+    imageUrl: '/certificates/barista-buono.jpg',
     category: 'other',
   },
   {
@@ -530,7 +551,7 @@ export const certificates: Certificate[] = [
     title: 'IEEEXtreme 19.0 Programming Competition',
     issuer: 'IEEE',
     date: 'Oct 2025',
-    imageUrl: '/certificates/ieee-extreme-19.pdf',
+    imageUrl: '/certificates/ieee-extreme-19.png',
     category: 'other',
   },
 ]
@@ -546,5 +567,5 @@ export const personalInfo = {
   phone: '(+94) 71 359 8786',
   linkedin: 'https://www.linkedin.com/in/dilum-samarathunga/',
   github: 'https://github.com/vishmikas',
-  cvPath: '/Dilum_Vishmika_CV.pdf',
+  cvPath: '/Dilum_Samarathunga.pdf',
 }

@@ -10,14 +10,10 @@ export const metadata = {
 }
 
 export default function CertificatesPage() {
-  const technical = certificates.filter(c => c.category === 'technical')
-  const management = certificates.filter(c => c.category === 'management')
-  const design = certificates.filter(c => c.category === 'design')
-
   const groups = [
-    { label: 'Technical', items: technical },
-    { label: 'Management', items: management },
-    { label: 'Design', items: design },
+    { label: 'Technical', items: certificates.filter(c => c.category === 'technical') },
+    { label: 'Management', items: certificates.filter(c => c.category === 'management') },
+    { label: 'Design', items: certificates.filter(c => c.category === 'design') },
     { label: 'Other', items: certificates.filter(c => c.category === 'other') },
   ].filter(g => g.items.length > 0)
 
@@ -29,7 +25,7 @@ export default function CertificatesPage() {
           title="Certificates Vault"
           subtitle={`${certificates.length} certifications across technical, management, design, and other disciplines.`}
         >
-          <div className="space-y-12">
+          <div className="space-y-14">
             {groups.map(group => (
               <div key={group.label}>
                 <h3
@@ -38,7 +34,7 @@ export default function CertificatesPage() {
                 >
                   {group.label}
                 </h3>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
                   {group.items.map((cert, i) => (
                     <CertCard key={cert.id} cert={cert} index={i} />
                   ))}
