@@ -68,42 +68,37 @@ export const skillCategories: SkillCategory[] = [
   {
     label: 'Languages',
     icon: 'Code2',
-    skills: ['Python', 'Java', 'JavaScript', 'TypeScript', 'SQL', 'HTML', 'CSS'],
+    skills: ['Python', 'Java', 'JavaScript', 'HTML', 'CSS'],
   },
   {
     label: 'Frontend',
     icon: 'Monitor',
-    skills: ['React', 'Next.js', 'Vite', 'Tailwind CSS', 'Bootstrap', 'Plotly.js', 'Recharts'],
+    skills: ['React', 'Vite', 'Tailwind CSS', 'Plotly.js', 'Recharts'],
   },
   {
     label: 'Backend',
     icon: 'Server',
-    skills: ['Node.js', 'Express', 'Flask', 'Spring Boot', 'REST APIs', 'JWT Authentication', 'Socket.IO', 'WebSockets'],
+    skills: ['Node.js', 'Express', 'Flask', 'Spring Boot', 'REST API', 'JWT', 'Socket.IO', 'WebSockets'],
   },
   {
     label: 'Databases',
     icon: 'Database',
-    skills: ['MongoDB', 'MySQL', 'SQLite', 'SQLAlchemy', 'Mongoose', 'JDBC', 'IndexedDB'],
+    skills: ['MongoDB', 'MySQL', 'SQLite', 'Mongoose', 'SQLAlchemy', 'JDBC', 'IndexedDB'],
   },
   {
     label: 'AI / ML',
     icon: 'Brain',
-    skills: ['TensorFlow / Keras', 'LSTM Models', 'Data Preprocessing', 'Growth Prediction', 'Gemini AI Integration', 'Pandas'],
+    skills: ['TensorFlow / Keras', 'Gemini AI', 'Pandas', 'Plotly.js'],
   },
   {
     label: 'Security',
     icon: 'Shield',
-    skills: ['bcrypt', 'Helmet', 'Rate Limiting', 'Input Validation', 'JWT', 'Mongo Sanitize'],
+    skills: ['bcryptjs', 'Helmet', 'Rate Limiting', 'Mongo Sanitize', 'JWT Auth'],
   },
   {
     label: 'Tools',
     icon: 'Wrench',
-    skills: ['Git', 'GitHub', 'Postman', 'VS Code', 'IntelliJ IDEA', 'Maven'],
-  },
-  {
-    label: 'Creative & Design',
-    icon: 'Cpu',
-    skills: ['Adobe Lightroom', 'Adobe Photoshop', 'Adobe Illustrator', 'Figma', 'Photography'],
+    skills: ['Git', 'GitHub', 'Postman', 'VS Code', 'IntelliJ IDEA', 'ClickUp'],
   },
 ]
 
@@ -342,7 +337,29 @@ export const projects: Project[] = [
       'Designing transaction flows that feel smooth in real usage',
       'Supporting reporting or synchronization concerns as the system grows',
     ],
-    devLogs: [],
+    devLogs: [
+      {
+        id: 'dl-pos-1',
+        date: '2026-01-08',
+        status: 'planning',
+        title: 'Designed LAN-based multi-terminal architecture',
+        description: 'Mapped out how cashier terminals would auto-detect the master server IP on startup over LAN, and how Socket.io would keep all terminals in sync during live events.',
+      },
+      {
+        id: 'dl-pos-2',
+        date: '2026-01-20',
+        status: 'feature',
+        title: 'Offline-first mode with IndexedDB',
+        description: 'Implemented full offline capability — terminals generate client-side ticket IDs using IndexedDB and continue issuing during network failures, then sync automatically on reconnect.',
+      },
+      {
+        id: 'dl-pos-3',
+        date: '2026-02-05',
+        status: 'feature',
+        title: 'Shift management and Z-report generation',
+        description: 'Built open/close shift workflows with per-terminal Z-reports, void and refund functionality, and an admin dashboard showing live global revenue and per-terminal performance stats.',
+      },
+    ],
   },
   {
     id: 'proj-4',
@@ -383,7 +400,15 @@ export const projects: Project[] = [
       'Making booking actions feel easy on both desktop and mobile',
       'Keeping the experience clear without overwhelming users with too much detail',
     ],
-    devLogs: [],
+    devLogs: [
+      {
+        id: 'dl-tour-1',
+        date: '2024-06-10',
+        status: 'feature',
+        title: 'Integrated EmailJS for booking confirmations',
+        description: 'Wired up EmailJS to send automated booking confirmation emails directly from the frontend, removing the need for a dedicated email server while keeping the user flow smooth.',
+      },
+    ],
   },
   {
     id: 'proj-5',
@@ -426,7 +451,22 @@ export const projects: Project[] = [
       'Implementing collision logic cleanly',
       'Maintaining readable code in a state-driven loop',
     ],
-    devLogs: [],
+    devLogs: [
+      {
+        id: 'dl-snake-1',
+        date: '2024-09-05',
+        status: 'planning',
+        title: 'Designed REST API contract for game state',
+        description: 'Designed Spring Boot endpoints for move processing, game state retrieval, and collision detection — keeping all game logic server-side so the React frontend only handles rendering and input.',
+      },
+      {
+        id: 'dl-snake-2',
+        date: '2024-09-18',
+        status: 'feature',
+        title: 'Backend game engine with collision detection',
+        description: 'Implemented full game engine in Spring Boot: snake movement, wall and self-collision detection, apple spawning, scoring, and game-over state management via REST.',
+      },
+    ],
   },
   {
     id: 'proj-6',
@@ -475,7 +515,15 @@ export const projects: Project[] = [
       'Mapping relational records cleanly into Java objects',
       'Designing a desktop workflow that stays simple for administrative users',
     ],
-    devLogs: [],
+    devLogs: [
+      {
+        id: 'dl-result-1',
+        date: '2024-07-12',
+        status: 'feature',
+        title: 'DAO pattern with PreparedStatement queries',
+        description: 'Built StudentDAO and ResultDAO classes with PreparedStatement-based CRUD to prevent SQL injection and keep database logic fully separated from the Swing UI layer.',
+      },
+    ],
   },
 ]
 
@@ -568,4 +616,79 @@ export const personalInfo = {
   linkedin: 'https://www.linkedin.com/in/dilum-samarathunga/',
   github: 'https://github.com/vishmikas',
   cvPath: '/Dilum_Samarathunga.pdf',
+  siteUrl: 'https://portfolio-rosegamma-53.vercel.app',
 }
+
+export type Referee = {
+  name: string
+  title: string
+  institution: string
+  phone: string
+  email: string
+}
+
+export const referees: Referee[] = [
+  {
+    name: 'Mr. G.A. Pubudu Janith',
+    title: 'Lecturer',
+    institution: 'Informatics Institute of Technology (IIT)',
+    phone: '+94 77 127 4857',
+    email: 'pubudu.a@iit.ac.lk',
+  },
+  {
+    name: 'Ms. Akarshani Ramanayake',
+    title: 'Lecturer',
+    institution: 'Informatics Institute of Technology (IIT)',
+    phone: '+94 71 999 3444',
+    email: 'akarshani.r@iit.ac.lk',
+  },
+]
+
+// Recent dev logs across all projects — shown on homepage
+export const recentDevLogs: (DevLogEntry & { project: string; projectSlug: string })[] = [
+  {
+    id: 'rdl-1',
+    date: '2026-04-19',
+    status: 'milestone',
+    title: 'Project Initiation cert earned',
+    description: 'Completed Google\'s Project Initiation course on Coursera — second in the Project Management series.',
+    project: 'Learning',
+    projectSlug: '',
+  },
+  {
+    id: 'rdl-2',
+    date: '2026-02-05',
+    status: 'feature',
+    title: 'POS — Shift management & Z-reports',
+    description: 'Shipped open/close shift workflows with per-terminal Z-reports, void/refund support, and live admin revenue dashboard.',
+    project: 'POS Ticketing System',
+    projectSlug: 'pos-ticketing',
+  },
+  {
+    id: 'rdl-3',
+    date: '2026-03-23',
+    status: 'milestone',
+    title: 'Foundations of Project Management cert',
+    description: 'Completed Google\'s Foundations of Project Management on Coursera.',
+    project: 'Learning',
+    projectSlug: '',
+  },
+  {
+    id: 'rdl-4',
+    date: '2026-01-20',
+    status: 'feature',
+    title: 'POS — Offline-first mode with IndexedDB',
+    description: 'Terminals now generate client-side ticket IDs and continue issuing during network failures, syncing automatically on reconnect.',
+    project: 'POS Ticketing System',
+    projectSlug: 'pos-ticketing',
+  },
+  {
+    id: 'rdl-5',
+    date: '2025-10-25',
+    status: 'milestone',
+    title: 'Competed in IEEEXtreme 19.0',
+    description: 'Participated with team LogicForge in the IEEEXtreme 19.0 Programming Competition — 19,000+ participants globally.',
+    project: 'Competition',
+    projectSlug: '',
+  },
+]

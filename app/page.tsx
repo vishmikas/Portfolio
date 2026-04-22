@@ -6,6 +6,8 @@ import ProjectCard from '@/components/ui/ProjectCard'
 import SplashGate from '@/components/home/SplashGate'
 import ContactPopup from '@/components/home/ContactPopup'
 import AboutHighlights from '@/components/home/AboutHighlights'
+import RecentActivity from '@/components/home/RecentActivity'
+import Referees from '@/components/home/Referees'
 import { projects } from '@/lib/data'
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
@@ -45,6 +47,8 @@ export default function HomePage() {
         </Section>
 
         <AboutHighlights />
+        <RecentActivity />
+        <Referees />
       </main>
       <Footer />
       <ContactPopup />

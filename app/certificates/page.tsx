@@ -5,8 +5,12 @@ import CertCard from '@/components/ui/CertCard'
 import { certificates } from '@/lib/data'
 
 export const metadata = {
-  title: 'Certificates Vault — Dilum Samarathunga',
-  description: 'Professional and academic certifications.',
+  title: 'Certificates Vault',
+  description: '9 certifications from Google, LinkedIn Learning, University of Moratuwa, and IEEE — earned by Dilum Samarathunga across technical, management, and design disciplines.',
+  openGraph: {
+    title: 'Certificates Vault — Dilum Samarathunga',
+    description: '9 certifications from Google, LinkedIn Learning, University of Moratuwa, and IEEE — earned by Dilum Samarathunga across technical, management, and design disciplines.',
+  },
 }
 
 export default function CertificatesPage() {
